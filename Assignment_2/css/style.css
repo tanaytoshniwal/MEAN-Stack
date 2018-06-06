@@ -1,0 +1,25 @@
+.small-img {
+    width: 2.7rem;
+    height: 2.7rem;
+}
+#first {
+    background-image: url("../images/bg.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: .95em;
+    color: white;
+}
+.navigation {
+    background-color: rgba(120, 120, 120, 0.75);
+    font-size: 1.8vw;
+    color: rgb(11, 11, 11);
+}
+.card {
+    background-color: rgba(120, 120, 120, 0.75);
+}
+.form-head {
+    font-weight: 900;
+}
