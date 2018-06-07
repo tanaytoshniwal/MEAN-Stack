@@ -1,12 +1,12 @@
 .small-img {
     width: 2.7rem;
     height: 2.7rem;
+    background-color: rgba(210, 210, 210, .75);
+    border-color: rgba(210, 210, 210, .75);
 }
 #first {
     background-image: url("../images/bg.jpg");
-    background-repeat: no-repeat;
-    height: 100vh;
-    overflow: hidden;
+    height: 100%;
 }
 #second {
     color: rgb(90, 90, 90);
@@ -57,8 +57,24 @@ body {
 .marginchange {
     margin: 9px;
 }
-@media (max-width: 900px){
-    .marginchange {
-        margin: 0px;
+@media (min-width: 1200px) {
+    #first {
+        height: 100vh;
+    }
+}
+#form {
+    animation-name: wiggle;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+}
+@keyframes wiggle{
+    0%{
+        transform: translateY(-9px);
+    }
+    50%{
+        transform: translateY(9px);
+    }
+    100%{
+        transform: translateY(-9px);
     }
 }
