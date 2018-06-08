@@ -1,8 +1,4 @@
 
-.photogram:hover{
-    transform: scale(1.025);
-    transition: .3s;
-  }
 
   .small-img {
     width: 2.7rem;
@@ -22,8 +18,8 @@
   }
 
   .photogram-card:hover {
-    transform: scale(1.05);
-    transition: .18s;
+    transform: scale(1.08);
+    transition: .27s;
   }
   
   .photogram-caption {
