@@ -9,6 +9,35 @@
     font-family: 'Pacifico', sans-serif;
     font-size: 1.05em;
 }
+.block {
+    display: block;
+}
+.bg {
+    background-image: url('../images/bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scale(1.1);
+    background-attachment: fixed;
+    position: fixed;
+    filter: blur(5px);
+    box-sizing: inherit;
+    min-height: 100%;
+    z-index: -9;
+    width: 100%;
+    height: 100%;
+}
+.dance {
+    display: inline;
+    animation-name: dance;
+    animation-duration: .3s;
+    animation-iteration-count: infinite;
+}
+.dropdown-item:hover {
+    background-color: unset;
+}
+body {
+    color: white;
+}
 #blink {
     animation-name: blink;
     animation-duration: .8s;
@@ -20,5 +49,25 @@
     }
     70%{
         opacity: 0.0;
+    }
+}
+@keyframes dance {
+    0% {
+        color: rgb(255, 255, 255);
+    }
+    20%{
+        color: rgb(37, 37, 255);
+    }
+    40%{
+        color: rgb(37, 255, 244);
+    }
+    60%{
+        color: rgb(37, 255, 66);
+    }
+    80%{
+        color: rgb(255, 240, 37);
+    }
+    100% {
+        color: rgb(255, 30, 30);
     }
 }
