@@ -1,0 +1,23 @@
+{
+  "name": "mean-stack-training",
+  "version": "1.0.0",
+  "description": "Code and Assignments work done during my MEAN Stack Training",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlphaBAT69/MEAN-Stack-Training.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlphaBAT69/MEAN-Stack-Training/issues"
+  },
+  "homepage": "https://github.com/AlphaBAT69/MEAN-Stack-Training#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1"
+  }
+}
