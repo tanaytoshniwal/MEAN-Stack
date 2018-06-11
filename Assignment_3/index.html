@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment_3</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:500,600,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link rel="icon" href= "../images/logo.png"/>
+</head>
+    <body>
+        <div class="container-fluid my-font">
+            <nav class="row navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="http://tanaytoshniwal.com" target="_blank">
+                    <img src="../images/logo.png" alt="TT Logo" class="small-img img-fluid">
+                    <span class="m-3 title">Tanay Toshniwal</span>
+                </a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link my-font" href="http://tanaytoshniwal.com/MEAN-Stack-Training">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item active dropdown">
+                            <a class="nav-link dropdown-toggle my-font" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Assignments
+                            </a>
+                            <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item my-font text-light" href="./Assignment_1">Assignment_1</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item my-font text-light" href="./Assignment_2">Assignment_2</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item my-font text-light" href="./Assignment_3">Assignment_3</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link my-font" href="mailto:contact@tanaytoshniwal.com" target="_blank">
+                                Contact (contact@tanaytoshniwal.com)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="row my-5 justify-content-center text-dark">
+                    <ul class="list-group col-md-6 col-10">
+                        <li class="list-group-item bg-secondary" data-toggle="collapse" href="#Q1" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <div class="card text-center">
+                                <div class="class-header mx-md-5 my-md-3 mx-3 my-1">
+                                    <strong>Solution 1</strong>
+                                </div>
+                                <div id="Q1" class="card-body collapse">
+                                    <strong>Q.</strong>
+                                    Write a JavaScript program to find the area of a triangle where lengths of the three of its sides are 5, 6, 7.
+                                    <button class="btn btn-primary btn-block mt-2" onclick="solution_1()">Solution</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item bg-secondary" data-toggle="collapse" href="#Q2" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <div class="card text-center">
+                                <div class="class-header mx-md-5 my-md-3 mx-3 my-1">
+                                    <strong>Solution 2</strong>
+                                </div>
+                                <div id="Q2" class="card-body collapse">
+                                    <strong>Q.</strong>
+                                    Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.
+                                    <div>
+                                        <button class="btn btn-primary mt-2" onclick="solution_2(true)">Solution F-C</button>
+                                        <button class="btn btn-primary mt-2" onclick="solution_2(false)">Solution C-F</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item bg-secondary" data-toggle="collapse" href="#Q3" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <div class="card text-center">
+                                <div class="class-header mx-md-5 my-md-3 mx-3 my-1">
+                                    <strong>Solution 3</strong>
+                                </div>
+                                <div id="Q3" class="card-body collapse">
+                                    <strong>Q.</strong>
+                                    Write a JavaScript program to find the largest of three given integers.
+                                    <button class="btn btn-primary btn-block mt-2" onclick="solution_3()">Solution</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item bg-secondary" data-toggle="collapse" href="#Q4" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <div class="card text-center">
+                                <div class="class-header mx-md-5 my-md-3 mx-3 my-1">
+                                    <strong>Solution 4</strong>
+                                </div>
+                                <div id="Q4" class="card-body collapse">
+                                    <strong>Q.</strong>
+                                    Write a JavaScript program to capitalize the first letter of each word of a given string.
+                                    <button class="btn btn-primary btn-block mt-2" onclick="solution_4()">Solution</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item bg-secondary" data-toggle="collapse" href="#Q5" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <div class="card text-center">
+                                <div class="class-header mx-md-5 my-md-3 mx-3 my-1">
+                                    <strong>Solution 5</strong>
+                                </div>
+                                <div id="Q5" class="card-body collapse">
+                                    <strong>Q.</strong>
+                                    Write a JavaScript program to check if a given positive number is a multiple of 3 or a multiple of 7.
+                                    <button class="btn btn-primary btn-block mt-2" onclick="solution_5()">Solution</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item bg-secondary" data-toggle="collapse" href="#Q6" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <div class="card text-center">
+                                <div class="class-header mx-md-5 my-md-3 mx-3 my-1">
+                                    <strong>Solution 6</strong>
+                                </div>
+                                <div id="Q6" class="card-body collapse">
+                                    <strong>Q.</strong>
+                                    It is found by comparing two DNA strands and counting how many of the nucleotides are different from their equivalent in the other string.Find out the difference in 2 strings. How many chars are different ?
+                                    <button class="btn btn-primary btn-block mt-2" onclick="solution_6()">Solution</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item bg-secondary" data-toggle="collapse" href="#Q7" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <div class="card text-center">
+                                <div class="class-header mx-md-5 my-md-3 mx-3 my-1">
+                                    <strong>Solution 7</strong>
+                                </div>
+                                <div id="Q7" class="card-body collapse">
+                                    <strong>Q.</strong>
+                                    Determine if a sentence is a pangram. A pangram (Greek: παν γράμμα, pan gramma, "every letter") is a sentence using every letter of the alphabet at least once. The best known English pangram is "The quick brown fox jumps over the lazy dog." The alphabet used is ASCII, and case insensitive, from 'a' to 'z' inclusively.
+                                    <button class="btn btn-primary btn-block mt-2" onclick="solution_7()">Solution</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item bg-secondary" data-toggle="collapse" href="#Q8" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <div class="card text-center">
+                                <div class="class-header mx-md-5 my-md-3 mx-3 my-1">
+                                    <strong>Solution 8</strong>
+                                </div>
+                                <div id="Q8" class="card-body collapse">
+                                    <strong>Q.</strong>
+                                    Determine if a word or phrase is an isogram.
+                                    <button class="btn btn-primary btn-block mt-2" onclick="solution_8()">Solution</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item bg-secondary" data-toggle="collapse" href="#Q9" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <div class="card text-center">
+                                <div class="class-header mx-md-5 my-md-3 mx-3 my-1">
+                                    <strong>Solution 9</strong>
+                                </div>
+                                <div id="Q9" class="card-body collapse">
+                                    <strong>Q.</strong>
+                                    Convert a long phrase to its acronym.Techies love their TLA (Three Letter Acronyms). Help generate some jargon by writing a program that converts a long name like Portable Network Graphics to its acronym (PNG).
+                                    <button class="btn btn-primary btn-block mt-2" onclick="solution_9()">Solution</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item bg-secondary" data-toggle="collapse" href="#Q10" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <div class="card text-center">
+                                <div class="class-header mx-md-5 my-md-3 mx-3 my-1">
+                                    <strong>Solution 10</strong>
+                                </div>
+                                <div id="Q10" class="card-body collapse">
+                                    <strong>Q.</strong>
+                                    Create a JSON data object for Facebook news feed, should have data for author name, author image, post content, list of likes, comments and share etc. Now you must be able to query these :
+
+                                    <br>a. Check how many posts are there by a particular user in your feed ? 
+                                    <br>b. How many likes on 5th post ?
+                                    <br>c. Who are the users who liked 5th post ?
+                                    <br>d. Who is the First user to like 5th post ?
+                                    <br>e. How many users are there who have both commented and liked 5th post. Also show list of those users.
+                                    <br>f. Find out the person who has commented most on your feed. (In top 10 posts)
+                                    <button class="btn btn-primary btn-block mt-2" onclick="solution_10()">Solution</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item bg-secondary" data-toggle="collapse" href="#Q11" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <div class="card text-center">
+                                <div class="class-header mx-md-5 my-md-3 mx-3 my-1">
+                                    <strong>Solution 11</strong>
+                                </div>
+                                <div id="Q11" class="card-body collapse">
+                                    <strong>Q.</strong>
+                                    Create a JS object representing your facebook friendlist.
+
+                                    <br>a. Delete friends who have fake as first name. ( e.g fake singh)
+                                    <br>b. Add 2 more friends to your friendlist at a time.
+                                    <br>c. print all friends in your friendlist sorted by Name.
+                                    <br>d. print all friends in your friendlist sorted by Length of Name( # of chars)
+                                    <br>e. print initials of all your friends (Virat Kohli becomes VK)
+                                    <br>f. print only friends who have same first names
+                                    <button class="btn btn-primary btn-block mt-2" onclick="solution_11()">Solution</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="./js/index.js"></script>
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    </body>
+</html>
