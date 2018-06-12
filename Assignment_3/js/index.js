@@ -92,9 +92,120 @@ function solution_9(){
     ans = ans.toUpperCase();
     alert('Answer is: '+ans);
 }
+
+/* This is Solution 10 Class */
+class feed{
+	constructor(author, image, content, likes, comments, share){
+		this.author = author;
+		this.image = image;
+		this.content = content;
+        this.likes = likes;
+        this.comments = comments;
+		this.share = share;
+	}
+}
+function find_number_of_post(name, feeds){
+    var count=0;
+    for(var i=0; i<feeds.length; i++){
+        if(feeds[i].author == name)
+            count++;
+    }
+    return count;
+}
+function number_of_likes(post, feeds){
+    return feeds[parseInt(post)-1].likes.length;
+}
+function print_users_like(number, feeds){
+    var names = '';
+    for(var i=0; i<feeds[parseInt(number)-1].likes.length; i++){
+        names += feeds[parseInt(number)-1].likes[i] + '\n';
+    }
+    alert('Users who liked '+number+' post are:\n'+names);
+}
+function print_first_user_like(number, feeds){
+    alert('First person to like this post is:\n'+feeds[parseInt(number)-1].likes[0]);
+}
+function print_user_comment_like(number, feeds){
+    var names = '';
+    for(var i=0; i<feeds[parseInt(number)-1].comments.length; i++){
+        var n = feeds[parseInt(number)-1].comments[i].name;
+        for(var j=0; j<feeds[parseInt(number)-1].likes.length; j++){
+            if(feeds[parseInt(number)-1].likes[j] === n)
+                names += n+'\n';
+        }
+    }
+    alert('Users who have commented and liked '+number+' post are:\n'+names);
+}
+function print_most_comments(feeds){
+    var res = '';
+    var max = -1;
+    var names_arr = [];
+    for(var i=0; i<feeds.length; i++){
+        for(var j=0; j<feeds[i].comments.length; j++){
+            names_arr.push(feeds[i].comments[j].name);
+        }
+    }
+    for(var i=0; i<names_arr.length; i++){
+        var c=0;
+        for(var j=0; j<names_arr.length; j++){
+            if(names_arr[i] == names_arr[j])
+                c++;
+        }
+        if(c>max){
+            max = c;
+            res = names_arr[i];
+        }
+    }
+    alert('User most commented: '+res);
+}
 function solution_10(){ 
-    var feeds = {author:'', image:'', content:'', likes:[], comments:[], share:''};    
+    var feed_1 = new feed('one', 'path/to/image', 'this is sample content', ['person_1', 'person_2', 'person_2'], [{name:'person_1', comment:'hello'}], 3);
+    var feed_2 = new feed('two', 'path/to/image', 'this is sample content', ['person_3', 'person_1', 'person_2'], [{name:'person_1', comment:'hello'}], 3);
+    var feed_3 = new feed('one', 'path/to/image', 'this is sample content', ['person_3', 'person_1', 'person_2'], [{name:'person_1', comment:'hello'}], 3);
+    var feed_4 = new feed('four', 'path/to/image', 'this is sample content', ['person_1', 'person_2', 'person_1'], [{name:'person_2', comment:'hello'}], 3);
+    var feed_5 = new feed('one', 'path/to/image', 'this is sample content', ['smaple', 'person_1', 'person_1', 'person_2'], [{name:'person_2', comment:'hello'}, {name:'person_5', comment:'hello'}], 3);
+    var feed_6 = new feed('six', 'path/to/image', 'this is sample content', ['person_2', 'person_1', 'person_2'], [{name:'person_1', comment:'hello'}], 3);
+    var feed_7 = new feed('one', 'path/to/image', 'this is sample content', ['person_2', 'person_2', 'person_1'], [{name:'person_1', comment:'hello'}], 3);
+    var feed_8 = new feed('eight', 'path/to/image', 'this is sample content', ['person_2', 'person_2', 'person_1'], [{name:'person_1', comment:'hello'}], 3);
+    var feed_9 = new feed('nine', 'path/to/image', 'this is sample content', ['person_1', 'person_2', 'person_2'], [{name:'person_2', comment:'hello'}], 3);
+    var feed_10 = new feed('ten', 'path/to/image', 'this is sample content', ['person_3', 'person_3', 'person_2'], [{name:'person_3', comment:'hello'}], 3);
+    var feeds = [feed_1, feed_2, feed_3, feed_4, feed_5, feed_6, feed_7, feed_8, feed_9, feed_10];
+    var query = prompt('Input question number:');
+    switch(parseInt(query)){
+        case 1:
+            var name = prompt('Input user name:');
+            alert('Number of feeds by user-'+name+' are: '+ find_number_of_post(name, feeds));
+            break;
+        case 2:
+            var number = prompt('Input post number:');
+            alert('Number of likes on 5th post: '+number_of_likes(number, feeds));
+            break;
+        case 3:
+            var number = prompt('Input post number:');
+            print_users_like(number, feeds);
+            break
+        case 4:
+            var number = prompt('Input post number:');
+            print_first_user_like(number, feeds);
+            break;
+        case 5:
+            var number = prompt('Input post number:');
+            print_user_comment_like(number, feeds);
+            break;
+        case 6:
+            print_most_comments(feeds);
+            break;
+        default:
+            alert('Wrong Input');
+    }
+}
+/* Solution 10 ends here */
+/* Solution 11 */
+class friends{
+    constructor(name){
+        this.name = name;
+    }
 }
 function solution_11(){
-    var friends_list = {fname:'', lname:''};
+    var friend_1 = new friends
 }
