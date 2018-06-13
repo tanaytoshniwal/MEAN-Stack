@@ -201,11 +201,61 @@ function solution_10(){
 }
 /* Solution 10 ends here */
 /* Solution 11 */
-class friends{
-    constructor(name){
-        this.name = name;
+class list{
+    constructor(friends){
+        this.friends = friends;
     }
+    delete_fake(){
+        for(var i=0; i<this.friends.length; i++){
+            if(this.friends[i].split(' ')[0].toLowerCase() == 'fake')
+                this.friends.splice(i, 1);
+        }
+        console.log(this.friends.length);
+    }
+    
 }
 function solution_11(){
-    var friend_1 = new friends
+    var friend_1 = 'Fake Singh';
+    var friend_2 = 'Chikka Singh';
+    var friend_3 = 'Noony Singh';
+    var friend_4 = 'Hello Singh';
+    var friend_5 = 'One Singh';
+    var friend_6 = 'oneone Singh';
+    var friend_7 = 'abcd Singh';
+    var friend_8 = 'world Singh';
+    var friend_9 = 'b Singh';
+
+    var friends = [friend_1, friend_2, friend_3, friend_4, friend_5, friend_6, friend_7, friend_8, friend_9];
+    var my_friends = new list(friends);
+
+    var query = prompt('Input question number:');
+    switch(parseInt(query)){
+        case 1:
+            var old = my_friends.friends.length;
+            my_friends.delete_fake();
+            alert('Old Length: '+old+'\nNew Length: '+my_friends.friends.length);
+            break;
+        case 2:
+            var old = my_friends.friends.length;
+            var names = prompt('Input friends seperated by comma(,) :');
+            names = names.split(',');
+            my_friends.join_friends(names);
+            alert('Old Length: '+old+'\nNew Length: '+my_friends.friends.length);
+            break;
+        case 3:
+        
+            break
+        case 4:
+        
+            break;
+        case 5:
+        
+            break;
+        case 6:
+        
+            break;
+        default:
+            alert('Wrong Input');
+    }
 }
+/* Solution 11 ends here */
