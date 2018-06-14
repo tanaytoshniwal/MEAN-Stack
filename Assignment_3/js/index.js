@@ -242,6 +242,15 @@ class list{
         }
         alert(names);
     }
+    first_same(){
+        this.friends  = this.friends.sort();
+        var names = '';
+        for(var i=0; i<this.friends.length-1; i++){
+            if(this.friends[i].split(" ")[0]==this.friends[i+1].split(" ")[0])
+                names += this.friends[i] + '\n';
+        }
+        alert(names);
+    }
 }
 function solution_11(){
     var friend_1 = 'Fake Singh';
@@ -252,7 +261,7 @@ function solution_11(){
     var friend_6 = 'Oneone Singh';
     var friend_7 = 'Abcd Singh';
     var friend_8 = 'World Singh';
-    var friend_9 = 'B Singh';
+    var friend_9 = 'Abcd cdba';
 
     var friends = [friend_1, friend_2, friend_3, friend_4, friend_5, friend_6, friend_7, friend_8, friend_9];
     var my_friends = new list(friends);
@@ -281,7 +290,7 @@ function solution_11(){
             my_friends.initials();
             break;
         case 6:
-        
+            my_friends.first_same();
             break;
         default:
             alert('Wrong Input');
