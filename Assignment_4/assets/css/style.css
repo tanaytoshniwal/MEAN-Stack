@@ -1,0 +1,48 @@
+
+
+  .small-img {
+    width: 2.7rem;
+    height: 2.7rem;
+}
+.title {
+    font-family: 'Pacifico', sans-serif;
+    font-size: 1.05em;
+}
+
+.photogram-button:hover {
+    transform: scale(1.05);
+    transition: .18s;
+    background-color: rgba(120, 120, 150, 0.75);
+    border-color: #000;
+    color: #000;
+  }
+
+  .photogram-card:hover {
+    transform: scale(1.08);
+    transition: .27s;
+  }
+  
+  .photogram-caption {
+    color: rgba(120, 120, 120, 0.75);
+    font-weight: 1200;
+  }
+
+  .center{
+    text-align: center;
+  }
+  
+  .login-btn{
+    font-size: 3em;
+    margin-top: 18px;
+  }
+  
+  .welcome{
+    text-align: center;
+    font-size: 3em;
+    font-family: inherit;
+    color: rgb(21, 21, 21);
+  }
+  .welcome-text {
+    color: rgba(21, 21, 120, 0.75);
+    font-weight: bold;
+  }  
