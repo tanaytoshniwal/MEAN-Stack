@@ -37,6 +37,8 @@
     <script src="./assets/plugins/maps-google/plugin.js"></script>
     <!-- Input Mask Plugin -->
     <script src="./assets/plugins/input-mask/plugin.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./assets/js/main.js"></script>
   </head>
   <body class="">
     <div class="page">
@@ -70,7 +72,7 @@
           <div class="container">
             <div class="page-header">
               <div class="page-subtitle">1 - 12 of 1713 photos</div>
-              <button type="button" class="btn btn-primary col-md-1 ml-auto photogram-button">Upload</button>
+              <button type="button" class="btn btn-primary col-md-1 ml-auto photogram-button" onclick="upload()">Upload</button>
               <div class="page-options d-flex">
                 <select class="form-control custom-select w-auto">
                   <option value="asc">Newest</option>
@@ -84,8 +86,8 @@
                 </div>
               </div>
             </div>
-            <div class="row row-cards">
-              <div class="col-sm-6 col-lg-4">
+            <div id="uploads" class="row row-cards">
+              <div id="layout" class="col-sm-6 col-lg-4">
                 <div class="card p-3 photogram-card">
                   <a href="javascript:void(0)" class="mb-3">
                     <img src="./demo/photos/grant-ritchie-338179-500.jpg" alt="Photo by Nathan Guerrero" class="rounded photogram">

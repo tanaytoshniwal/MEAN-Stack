@@ -1,0 +1,17 @@
+{
+  "name": "assignment_4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tanay Toshniwal",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}
