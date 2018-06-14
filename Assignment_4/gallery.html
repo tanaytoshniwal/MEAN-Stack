@@ -72,7 +72,65 @@
           <div class="container">
             <div class="page-header">
               <div class="page-subtitle">1 - 12 of 1713 photos</div>
-              <button type="button" class="btn btn-primary col-md-1 ml-auto photogram-button" onclick="upload()">Upload</button>
+              <button type="button" class="btn btn-primary col-md-1 ml-auto photogram-button" data-toggle="modal" data-target="#form">Upload</button>
+              <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Input Details:</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div>
+                        <div class="d-flex flex-row my-2 justify-content-center">
+                          <div class="d-flex flex-column justify-content-center col-md-6">
+                            <label for="inputuname">Input User Name:</label>
+                          </div>
+                          <div class="d-flex flex-column justify-content-center col-md-6">
+                            <input type="text" name="inputuname" id="inputuname" required>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="d-flex flex-row my-2 justify-content-center">
+                          <div class="d-flex flex-column justify-content-center col-md-6">
+                            <label for="inputcaption">Input Caption:</label>
+                          </div>
+                          <div class="d-flex flex-column justify-content-center col-md-6">
+                            <input type="text" name="inputcaption" id="inputcaption" required>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="d-flex flex-row my-2 justify-content-center">
+                          <div class="d-flex flex-column justify-content-center col-md-6">
+                            <label for="inputimage">Input Image URL:</label>
+                          </div>
+                          <div class="d-flex flex-column justify-content-center col-md-6">
+                            <input type="text" name="inputimage" id="inputimage" required>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="d-flex flex-row my-2 justify-content-center">
+                          <div class="d-flex flex-column justify-content-center col-md-6">
+                            <label for="inputuimage">Input User Image URL:</label>
+                          </div>
+                          <div class="d-flex flex-column justify-content-center col-md-6">
+                            <input type="text" name="inputuimage" id="inputuimage" required>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" onclick="upload()" data-dismiss="modal">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="page-options d-flex">
                 <select class="form-control custom-select w-auto">
                   <option value="asc">Newest</option>

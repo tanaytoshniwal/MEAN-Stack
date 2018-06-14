@@ -12,6 +12,7 @@
   "author": "Tanay Toshniwal",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.1.1",
     "jquery": "^3.3.1"
   }
 }

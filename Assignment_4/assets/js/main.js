@@ -1,10 +1,10 @@
 /* This is the upload function logic */
 
 function upload(){
-    var name = prompt('Enter Your Name:');
-    var caption = prompt('Enter Caption:');
-    var image = prompt('Add Image:');
-    var avatar = prompt('Add User Image:');
+    var name = $("#inputuname").val();
+    var caption = $("#inputcaption").val();
+    var image = $("#inputimage").val();
+    var avatar = $("#inputuimage").val();
 
     if(name == "" || caption == "" || image == "" || avatar == "" || name == null || caption == null || image == null || avatar == null){
         alert("Input correct data!");
