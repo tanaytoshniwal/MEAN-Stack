@@ -212,7 +212,36 @@ class list{
         }
         console.log(this.friends.length);
     }
-    
+    join_friends(names){
+        for(var i = 0; i<names.length; i++)
+            this.friends.push(names[i]);
+    }
+    print(){
+        this.friends.sort();
+        var names = '';
+        for(var i=0; i<this.friends.length; i++)
+            names += this.friends[i]+'\n';
+        alert(names);
+    }
+    print_length(){
+        this.friends.sort(function(a,b){
+            return b.length - a.length;
+        });
+        var names = '';
+        for(var i=0; i<this.friends.length; i++)
+            names += this.friends[i]+'\n';
+        alert(names);
+    }
+    initials(){
+        var names='';
+        for(var i = 0; i<this.friends.length; i++){
+            var n = this.friends[i].split(" ");
+            for(var j=0; j<n.length; j++)
+                names += n[j][0];
+            names += '\n'
+        }
+        alert(names);
+    }
 }
 function solution_11(){
     var friend_1 = 'Fake Singh';
@@ -220,10 +249,10 @@ function solution_11(){
     var friend_3 = 'Noony Singh';
     var friend_4 = 'Hello Singh';
     var friend_5 = 'One Singh';
-    var friend_6 = 'oneone Singh';
-    var friend_7 = 'abcd Singh';
-    var friend_8 = 'world Singh';
-    var friend_9 = 'b Singh';
+    var friend_6 = 'Oneone Singh';
+    var friend_7 = 'Abcd Singh';
+    var friend_8 = 'World Singh';
+    var friend_9 = 'B Singh';
 
     var friends = [friend_1, friend_2, friend_3, friend_4, friend_5, friend_6, friend_7, friend_8, friend_9];
     var my_friends = new list(friends);
@@ -241,15 +270,15 @@ function solution_11(){
             names = names.split(',');
             my_friends.join_friends(names);
             alert('Old Length: '+old+'\nNew Length: '+my_friends.friends.length);
-            break;
+            break; 
         case 3:
-        
+            my_friends.print();
             break
         case 4:
-        
+            my_friends.print_length();
             break;
         case 5:
-        
+            my_friends.initials();
             break;
         case 6:
         

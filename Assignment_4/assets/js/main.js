@@ -6,7 +6,7 @@ function upload(){
     var image = prompt('Add Image:');
     var avatar = prompt('Add User Image:');
 
-    if(name == "" || caption == "" || image == "" || avatar == ""){
+    if(name == "" || caption == "" || image == "" || avatar == "" || name == null || caption == null || image == null || avatar == null){
         alert("Input correct data!");
     }
     else{
