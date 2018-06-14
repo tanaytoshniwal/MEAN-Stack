@@ -21,4 +21,8 @@ function upload(){
         
         $("#uploads").prepend(card_layout);
     }
+    var name = $("#inputuname").val("");
+    var caption = $("#inputcaption").val("");
+    var image = $("#inputimage").val("");
+    var avatar = $("#inputuimage").val("");
 }
