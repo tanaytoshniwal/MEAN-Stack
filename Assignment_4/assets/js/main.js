@@ -7,7 +7,10 @@ function upload(){
     var avatar = $("#inputuimage").val();
 
     if(name == "" || caption == "" || image == "" || avatar == "" || name == null || caption == null || image == null || avatar == null){
-        alert("Input correct data!");
+        if(name=='' || name==null) $("#inputuname").css('border-color', 'red');
+        if(caption=='' || caption==null) $("#inputcaption").css('border-color', 'red');
+        if(image=='' || image==null) $("#inputimage").css('border-color', 'red');
+        if(avatar=='' || avatar==null) $("#inputuimage").css('border-color', 'red');
     }
     else{
         var card_layout = $("#layout").clone();
@@ -20,9 +23,10 @@ function upload(){
         $("div div.d-flex.align-items-center.px-2 div div.photogram-caption", card_layout).text(caption);
         
         $("#uploads").prepend(card_layout);
+        var name = $("#inputuname").val("");
+        var caption = $("#inputcaption").val("");
+        var image = $("#inputimage").val("");
+        var avatar = $("#inputuimage").val("");
+        $('#form').modal('toggle');
     }
-    var name = $("#inputuname").val("");
-    var caption = $("#inputcaption").val("");
-    var image = $("#inputimage").val("");
-    var avatar = $("#inputuimage").val("");
 }
