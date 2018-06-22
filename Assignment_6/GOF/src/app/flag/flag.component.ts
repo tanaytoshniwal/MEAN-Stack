@@ -17,12 +17,14 @@ export class FlagComponent implements OnInit {
   score = 0;
   total = 0;
   value = false;
+  begin = false;
+  time = 0;
+  variable;
 
   constructor(private dataService:DataService) { }
 
   ngOnInit() {
     this.next();this.total = 0;
-
   }
 
   store(o){
@@ -43,11 +45,24 @@ export class FlagComponent implements OnInit {
     console.log(this.options);
   }
 
-  print(){
-    if(this.total!==0)
-      this.scoreboard.push({score: this.score, total: this.total});
+  submit(){
+    clearInterval(this.variable);
+    this.scoreboard.push({score: this.score, total: this.total});
+    this.begin = false;
+    this.time = 0;
+  }
+
+  start(){
+    this.begin = true;
     this.score = 0;
+    this.value = false;
     this.total = 0;
+    this.variable = setInterval(()=>{
+      this.time++;
+      console.log(this.time);
+      if(this.time > 60){
+        this.submit();
+      }}, 1000);
   }
 
   next(){
