@@ -8,13 +8,19 @@ import { RegisterComponent } from './register/register.component';
 import { PhotogramComponent } from './photogram/photogram.component';
 import { CardComponent } from './card/card.component';
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { Header2Component } from './header2/header2.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
     PhotogramComponent,
-    CardComponent
+    CardComponent,
+    HeaderComponent,
+    FooterComponent,
+    Header2Component
   ],
   imports: [
     BrowserModule,

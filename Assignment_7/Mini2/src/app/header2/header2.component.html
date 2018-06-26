@@ -1,0 +1,58 @@
+<div class="page-header">
+    <div class="page-subtitle">1 - 12 of 1713 photos</div>
+    <button type="button" class="btn btn-primary col-md-1 ml-auto photogram-button" data-toggle="modal" data-target="#form">Upload</button>
+    <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Input Details:</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div>
+              <div class="d-flex flex-row my-2 justify-content-center">
+                  <input type="text" name="inputuname" id="inputuname" class="form-control" placeholder="User Name" required [(ngModel)] = "name">
+                
+              </div>
+            </div>
+            <div>
+              <div class="d-flex flex-row my-2 justify-content-center">
+                  <input type="text" name="inputcaption" id="inputcaption" class="form-control" placeholder="Caption" required [(ngModel)] = "caption">
+                
+              </div>
+            </div>
+            <div>
+              <div class="d-flex flex-row my-2 justify-content-center">
+                  <input type="text" name="inputimage" id="inputimage" class="form-control" placeholder="Image URL" required [(ngModel)] = "photo">
+                
+              </div>
+            </div>
+            <div>
+              <div class="d-flex flex-row my-2 justify-content-center">
+                  <input type="text" name="inputuimage" id="inputuimage" class="form-control" placeholder="User Image URL" required [(ngModel)] = "user">
+                
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" (click)="upload()">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-options d-flex">
+      <select class="form-control custom-select w-auto">
+        <option value="asc">Newest</option>
+        <option value="desc">Oldest</option>
+      </select>
+      <div class="input-icon ml-2">
+        <span class="input-icon-addon">
+          <i class="fe fe-search"></i>
+        </span>
+        <input type="text" class="form-control w-10" placeholder="Search by caption">
+      </div>
+    </div>
+  </div>
