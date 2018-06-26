@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DataService } from '../data.service';
 
 @Component({
@@ -8,11 +8,12 @@ import { DataService } from '../data.service';
 })
 export class CardComponent implements OnInit {
 
-  d = [];
-  constructor(private data: DataService) { }
+  a = 'adsasda';
+  constructor() { }
 
   ngOnInit() {
-    this.d = this.data.d;
   }
+
+  @Input() d: any;
 
 }
