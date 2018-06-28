@@ -17,12 +17,22 @@ export class ConverterComponent implements OnInit {
   ngOnInit() {
   }
 
-  get(){
-    this.http.get('https://exchangeratesapi.io/api/latest?base='+this.one).subscribe(
-      (data:any)=>{
-        console.log(data);
-        this.twotwo = this.oneone * data.rates[this.two];
-      }
-    );
+  get(b){
+    if(b){
+      this.http.get('https://exchangeratesapi.io/api/latest?base='+this.one).subscribe(
+        (data:any)=>{
+          console.log(data);
+          this.twotwo = this.oneone * data.rates[this.two];
+        }
+      );
+    }
+    else{
+      this.http.get('https://exchangeratesapi.io/api/latest?base='+this.two).subscribe(
+        (data:any)=>{
+          console.log(data);
+          this.oneone = this.twotwo * data.rates[this.one];
+        }
+      );
+    }
   }
 }

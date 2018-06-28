@@ -1,12 +1,14 @@
 <div class="container">
-  <select  [(ngModel)]="one">
-    <option  *ngFor="let t of tags; let i = index;">{{t}}</option>
-  </select>
-  <input type="text" [(ngModel)]="oneone">
-  <br>
-  <button (click)='get()'>convert</button>
-  <select  [(ngModel)]="two">
-    <option  *ngFor="let t of tags; let i = index;">{{t}}</option>
-  </select>
-  <input type="text" [(ngModel)]="twotwo">
+  <div class="d-flex flex-row justify-content-center m-5">
+    <select  [(ngModel)]="one">
+      <option  *ngFor="let t of tags; let i = index;">{{t}}</option>
+    </select>
+    <input type="text" [(ngModel)]="oneone" (input)='get(true)'>
+  </div>
+  <div class="d-flex flex-row justify-content-center m-5">
+    <select  [(ngModel)]="two">
+      <option  *ngFor="let t of tags; let i = index;">{{t}}</option>
+    </select>
+    <input type="text" [(ngModel)]="twotwo" (input)='get(false)'>
+  </div>
 </div>
